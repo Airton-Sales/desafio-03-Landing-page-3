@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #botão1 {
+            width: 300px;
+            height: 100px;
+            clip-path: polygon( 0% 0%, 82.74% 0%, 100% 77.85%, 100% 100%, 0% 100%, 2.93% 90%, 2.93% 5.33%, 82.37% 5.33%,
+            100% 88.93%, 2.93% 90%, 0% 100%);
+            
+            
+            border: 2px solid #f1b;
+            
+            
+            
+        }
+    </style>
     <title>Document</title>
 </head>
-<body>
-    <h1 class="bg-red-500">Hello</h1>
+
+<body class="flex h-screen bg-gradient-to-b from-[#22426b] via-[#225c88] to-[#AFD7DC]">
+    <img class="absolute w-[750px] h-[620px] bottom-5 right-36" src="imagens/Imagem principal.png">
+    <header class="flex w-full justify-between">
+        <div id="botão1" class="pt-10 ml-10">
+            <button class="text-white">INVENTORY</button>
+        </div>
+        <nav>
+            <ul class="flex justify-center items-center text-white gap-10 pt-10">
+                <li>HOME</li>
+                <li>LEVEL 1</li>
+                <li>SINOX</li>
+                <li>DISCOVER</li>
+                <li>SERVICE</li>
+            </ul>
+        </nav>
+        <div class="flex pt-7 gap-5">
+            <img class="w-10 h-10" src="imagens/envelope-1.png" alt="">
+            <img class="w-10 h-10" src="imagens/icon-2.png" alt="">
+            <img class="w-10 h-10" src="imagens/carteira.png" alt="">
+            <img class="w-10 h-10 mr-10" src="imagens/rede.png" alt="">
+        </div>
+    </header>
 </body>
+
 </html>
