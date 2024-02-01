@@ -16,21 +16,23 @@
             animation: 10s desenhar infinite alternate linear;
         }
 
-        
+
         @keyframes desenhar {
-            0%{
+            0% {
                 stroke-dashoffset: 0;
             }
-            100%{
+
+            100% {
                 stroke-dashoffset: 2266;
             }
         }
 
-        .botao {
+        .botão {
             position: relative;
             width: 7rem;
             height: 2.5rem;
             color: white;
+            font-weight: bolder;
             background-color: #AFD7DC;
             display: flex;
             justify-content: center;
@@ -40,7 +42,8 @@
 
         }
 
-        .botao::before, .botao::after{
+        .botão::before,
+        .botão::after {
             content: '';
             position: absolute;
             border-bottom-left-radius: 25px;
@@ -51,22 +54,33 @@
             background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
             background-size: 300%;
             background-position: 100%;
-            animation:  AnimarBorda 8s linear infinite alternate;
+            animation: AnimarBorda 8s linear infinite alternate;
+        }
+
+         .botão::after {
+            filter: blur(20px);
         }
 
         @keyframes AnimarBorda {
-            0%{
+            0% {
                 background-position: 0;
             }
-            100%{
+
+            100% {
                 background-position: 300%;
             }
         }
 
-        .botao::after {
-            filter: blur(20px);
+        @font-face {
+            font-family: Bili;
+            src: url(fonts/Graviton\ -\ NebulosaBlackDisplaySolid.otf) format("opentype");
+            src: url(fonts/Graviton\ -\ NebulosaBlackDisplayStencil.otf) format("opentype");
         }
-            
+
+        h1 {
+            font-family: Bili;
+        }
+
     </style>
     <title>Document</title>
 </head>
@@ -82,21 +96,20 @@
         </div>
         <nav>
             <ul class="flex justify-center items-center text-white gap-10 pt-10">
-                <li>HOME</li>
-                <li>LEVEL 1</li>
-                <li>SINOX</li>
-                <li>DISCOVER</li>
-                <li>SERVICE</li>
+                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">HOME</li>
+                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">LEVEL 1</li>
+                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">SINOX</li>
+                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">DISCOVER</li>
+                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">SERVICE</li>
             </ul>
         </nav>
         <div class="flex pt-8 gap-5">
-            <img class="w-8 h-8" src="imagens/envelope-1.png" alt="">
-            <img class="w-8 h-8" src="imagens/icon-2.png" alt="">
-            <img class="w-8 h-8" src="imagens/carteira.png" alt="">
-            <img class="w-8 h-8 mr-10" src="imagens/rede.png" alt="">
+            <img class="w-8 h-8 hover:scale-150 transition-all hover:cursor-pointer" src="imagens/envelope-1.png">
+            <img class="w-8 h-8 hover:scale-150 transition-all hover:cursor-pointer" src="imagens/icon-2.png">
+            <img class="w-8 h-8 hover:scale-150 transition-all hover:cursor-pointer" src="imagens/carteira.png">
+            <img class="w-8 h-8 hover:scale-150 transition-all hover:cursor-pointer mr-10" src="imagens/rede.png">
         </div>
     </header>
-
     <img class="absolute w-[750px] h-[620px] bottom-5 right-32" src="imagens/Imagem principal.png">
     <!--imagem principal-->
     <div class="absolute bottom-52 right-0 w-[20px] h-[400px] mr-10"> <!--linha da direita-->
@@ -104,7 +117,6 @@
             <line x1="10" y1="350" x2="10" y2="0" style="stroke:rgb(255, 255, 255);stroke-width:2" />
         </svg>
     </div>
-
     <div class="absolute bottom-36"> <!--linha da esquerda-->
         <svg height="500" width="100">
             <path fill="transparent" fill-opacity="0.0" d="M 0 50 L 50 100 L 50 450 L 0 500"></path>
@@ -116,13 +128,16 @@
         <button class="hover:scale-150 transition-all"><img class="w-7 h-7" src="imagens/img.png"></button>
         <button class="hover:scale-150 transition-all"><img class="w-7 h-7" src="imagens/teclado.png"></button>
     </div>
-    <div class="flex absolute bottom-52 items-end ml-20 h-64">
+
+    <h1 class="absolute top-56 left-8 text-7xl text-white font-black -rotate-90"><span class="text-[#ff629b]">SINOX</span> <br> <span class="text-[115px]">BILI</span></h1>
+
+    <div class="flex absolute bottom-52 items-end ml-20 ">
         <p class="text-white">Hi there! l'm SINOX, your <br> friendly assistant. How may l <br> help you today </p>
     </div>
 
     <div class="flex gap-5 absolute bottom-36 ml-20">
-        <button class="botao">Explore</button>
-        <button class="botao"> Create</button>
+        <button class="botão">Explore</button>
+        <button class="botão"> Create</button>
     </div>
     <footer class="absolute bottom-8 ml-11 text-white font-black">
         <p>IN &nbsp TN &nbsp DE &nbsp EN</p>
