@@ -27,7 +27,7 @@
             }
         }
 
-        .botão {
+        #botão {
             position: relative;
             width: 7rem;
             height: 2.5rem;
@@ -42,8 +42,8 @@
 
         }
 
-        .botão::before,
-        .botão::after {
+        #botão::before,
+        #botão::after {
             content: '';
             position: absolute;
             border-bottom-left-radius: 25px;
@@ -57,7 +57,7 @@
             animation: AnimarBorda 8s linear infinite alternate;
         }
 
-         .botão::after {
+        #botão::after {
             filter: blur(20px);
         }
 
@@ -80,7 +80,6 @@
         h1 {
             font-family: Bili;
         }
-
     </style>
     <title>Document</title>
 </head>
@@ -88,17 +87,34 @@
 <body class="flex h-screen bg-gradient-to-b from-[#22426b] via-[#225c88] to-[#AFD7DC]">
     <header class="flex w-full justify-between">
         <div class="flex justify-center items-center  ml-10 h-36 w-56"> <!--botão principal-->
-    <svg height="130" width="300" >
-        <rect d="M 10 10" x="10" y="20" rx="10" ry="20" cy="50" cx="50" width="180" height="60" style="fill:none;stroke-width:2;stroke:rgb(255, 255, 255)">
-    </svg>
+            <svg width="616" height="153" viewBox="-20 80 720 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="bot&#195;&#163;o">
+                    <path id="fundo"
+                        d="M597.263 151.842H351.985H25.1173C8.32582 152.801 1.55005 149.88 1 129.553V101.562V51.8V12.4052C4.38972 6.16955 7.02224 3.74652 12.8021 1.00146C183.424 1.4547 289.054 1.5323 495.15 1.00146C505.595 0.963352 509.98 1.65161 513.109 5.14826L606.5 113.484C615.175 121.606 616.469 126.761 613.684 136.81C611.415 145.72 607.527 148.172 598.803 150.805"
+                        stroke="#F8F2F2" ; stroke-width="5" />
+                    <path id="texto"
+                        d="M103.273 53.4545V100H97.6364V53.4545H103.273ZM151.483 53.4545V100H146.028L120.665 63.4545H120.21V100H114.574V53.4545H120.028L145.483 90.0909H145.938V53.4545H151.483ZM164.67 53.4545L178.489 92.6364H179.034L192.852 53.4545H198.761L181.67 100H175.852L158.761 53.4545H164.67ZM206.011 100V53.4545H234.102V58.4545H211.648V74.1818H232.648V79.1818H211.648V95H234.466V100H206.011ZM281.17 53.4545V100H275.716L250.352 63.4545H249.898V100H244.261V53.4545H249.716L275.17 90.0909H275.625V53.4545H281.17ZM289.903 58.4545V53.4545H324.812V58.4545H310.176V100H304.54V58.4545H289.903ZM370.847 76.7273C370.847 81.6364 369.96 85.8788 368.188 89.4545C366.415 93.0303 363.983 95.7879 360.892 97.7273C357.801 99.6667 354.271 100.636 350.301 100.636C346.331 100.636 342.801 99.6667 339.71 97.7273C336.619 95.7879 334.188 93.0303 332.415 89.4545C330.642 85.8788 329.756 81.6364 329.756 76.7273C329.756 71.8182 330.642 67.5758 332.415 64C334.188 60.4242 336.619 57.6667 339.71 55.7273C342.801 53.7879 346.331 52.8182 350.301 52.8182C354.271 52.8182 357.801 53.7879 360.892 55.7273C363.983 57.6667 366.415 60.4242 368.188 64C369.96 67.5758 370.847 71.8182 370.847 76.7273ZM365.392 76.7273C365.392 72.697 364.718 69.2955 363.369 66.5227C362.036 63.75 360.225 61.6515 357.938 60.2273C355.665 58.803 353.119 58.0909 350.301 58.0909C347.483 58.0909 344.93 58.803 342.642 60.2273C340.369 61.6515 338.559 63.75 337.21 66.5227C335.877 69.2955 335.21 72.697 335.21 76.7273C335.21 80.7576 335.877 84.1591 337.21 86.9318C338.559 89.7045 340.369 91.803 342.642 93.2273C344.93 94.6515 347.483 95.3636 350.301 95.3636C353.119 95.3636 355.665 94.6515 357.938 93.2273C360.225 91.803 362.036 89.7045 363.369 86.9318C364.718 84.1591 365.392 80.7576 365.392 76.7273ZM380.324 100V53.4545H396.051C399.688 53.4545 402.672 54.0758 405.006 55.3182C407.339 56.5455 409.066 58.2348 410.188 60.3864C411.309 62.5379 411.869 64.9848 411.869 67.7273C411.869 70.4697 411.309 72.9015 410.188 75.0227C409.066 77.1439 407.347 78.8106 405.028 80.0227C402.71 81.2197 399.748 81.8182 396.142 81.8182H383.415V76.7273H395.96C398.445 76.7273 400.445 76.3636 401.96 75.6364C403.491 74.9091 404.597 73.8788 405.278 72.5455C405.975 71.197 406.324 69.5909 406.324 67.7273C406.324 65.8636 405.975 64.2348 405.278 62.8409C404.581 61.447 403.468 60.3712 401.938 59.6136C400.407 58.8409 398.384 58.4545 395.869 58.4545H385.96V100H380.324ZM402.233 79.0909L413.688 100H407.142L395.869 79.0909H402.233ZM415.699 53.4545H422.153L435.062 75.1818H435.608L448.517 53.4545H454.972L438.153 80.8182V100H432.517V80.8182L415.699 53.4545Z"
+                        fill="white" />
+                </g>
+            </svg>
         </div>
         <nav>
             <ul class="flex justify-center items-center text-white gap-10 pt-10">
-                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">HOME</li>
-                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">LEVEL 1</li>
-                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">SINOX</li>
-                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">DISCOVER</li>
-                <li class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">SERVICE</li>
+                <li
+                    class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">
+                    HOME</li>
+                <li
+                    class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">
+                    LEVEL 1</li>
+                <li
+                    class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">
+                    SINOX</li>
+                <li
+                    class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">
+                    DISCOVER</li>
+                <li
+                    class="hover:scale-150 transition-all hover:cursor-pointer after:content-[''] after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full after:absolute after:left-0 after:bottom-0">
+                    SERVICE</li>
             </ul>
         </nav>
         <div class="flex pt-8 gap-5">
@@ -127,15 +143,16 @@
         <button class="hover:scale-150 transition-all"><img class="w-7 h-7" src="imagens/teclado.png"></button>
     </div>
 
-    <h1 class="absolute top-56 left-8 text-7xl text-white font-black -rotate-90"><span class="text-[#ff629b]">SINOX</span> <br> <span class="text-[115px]">BILI</span></h1>
+    <h1 class="absolute top-56 left-8 text-7xl text-white font-black -rotate-90"><span
+            class="text-[#ff629b]">SINOX</span> <br> <span class="text-[115px]">BILI</span></h1>
 
     <div class="flex absolute bottom-52 items-end ml-20 ">
         <p class="text-white">Hi there! l'm SINOX, your <br> friendly assistant. How may l <br> help you today </p>
     </div>
 
     <div class="flex gap-5 absolute bottom-36 ml-20">
-        <button class="botão">Explore</button>
-        <button class="botão"> Create</button>
+        <button id="botão" class="hover:scale-110 transition-all">Explore</button>
+        <button id="botão" class="hover:scale-110 transition-all"> Create</button>
     </div>
     <footer class="absolute bottom-8 ml-11 text-white font-black">
         <p>IN &nbsp TN &nbsp DE &nbsp EN</p>
